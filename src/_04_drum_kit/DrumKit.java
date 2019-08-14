@@ -26,6 +26,19 @@ public class DrumKit implements MouseListener {
 
 		// 1. Make a JFrame variable and initialize it using "new JFrame()"
 
+		JFrame frame = new JFrame();
+		frame.setVisible(true);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setSize(800, 600);
+		frame.setTitle("generic title lmao");
+		JPanel panel = new JPanel();
+		frame.add(panel);
+		String name = "drum.png";
+		drumLabelWithImage = createLabelImage(name);
+		frame.add(drumLabelWithImage);
+		panel.setLayout(new GridLayout());
+		frame.pack();
+		
 		// 2. Make the frame visible and
 		// set its default close operation to JFrame.EXIT_ON_CLOSE
 
