@@ -15,19 +15,14 @@ public class cuteness implements ActionListener {
 		JFrame frame = new JFrame();
 		frame.setVisible(true);
 		JButton button = new JButton();
+		JButton button2 = new JButton();
+		JButton button3 = new JButton();
 		frame.add(button);
+		frame.add(button2);
+		frame.add(button3);
 		frame.pack();
 		button.addActionListener(this);
-		
-		Random rando = new Random();
-		int i = rando.nextInt(5);
-		if(i == 0) {
-			showDucks();
-		} else if(i == 1) {
-			showFrog();
-		} else if(i == 2) {
-			showFluffyUnicorns();
-		}
+		button2.addActionListener(this);
 	}
 	
 	
@@ -54,7 +49,9 @@ public class cuteness implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
+		showDucks();
 		
 	}
+	
 	
 }
