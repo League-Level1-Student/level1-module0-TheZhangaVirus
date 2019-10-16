@@ -17,8 +17,8 @@ void setup() {
 
 int xPos = 52;
 int yPos = 30;
-int xMove = 2;
-int yMove = -2;
+int xMove = 3;
+int yMove = -4;
 int paddleY = 530;
 
 void draw() {
@@ -42,10 +42,13 @@ void draw() {
     xMove = -xMove;
   }
 
-  if(yPos > height) {
+  if(yPos > paddleY && xPos >= mouseX && xPos <= mouseX + 170) {
+    yPos = paddleY;
+    yMove = -yMove;
+  } else if(yPos > height) {
     yPos = height;
     yMove = -yMove;
-  }  
+  }
   
   if(xPos < 0) {
     xPos = 0;
