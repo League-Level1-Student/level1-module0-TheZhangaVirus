@@ -2,11 +2,12 @@ import java.util.Random;
 
 void setup() {
   size(600, 600);
-  background(7, 7, 7);
+  background(12, 0, 0);
 }
 
 void draw() {
   
+  makeMagical();
   Random rand = new Random();
   int xPos = rand.nextInt(600);
   int yPos = rand.nextInt(600);
@@ -20,7 +21,7 @@ void draw() {
 float frequency = .001;
     float noiseInterval = PI;
 
-    void makeMagical() {
+    void makeMagical() { 
         fill( 0, 0, 0, 10 );
         rect(0, 0, width, height);
         noStroke();
